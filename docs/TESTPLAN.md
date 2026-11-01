@@ -5,6 +5,13 @@ This test plan captures the current behavior of the COBOL application in
 `Actual Result` and `Status` are intentionally left for stakeholder or test
 execution recording. Monetary values are shown with two decimal places.
 
+## Scope and test levels
+
+This plan covers the menu flow, account credit and debit rules, balance persistence,
+and the direct contracts of `Operations` and `DataProgram`. Cases TC-001 through
+TC-013 and TC-018 are end-to-end console checks; TC-014 through TC-017 can be
+executed as focused module or call-level checks.
+
 | Test Case ID | Test Case Description | Pre-conditions | Test Steps | Expected Result | Actual Result | Status (Pass/Fail) | Comments |
 |---|---|---|---|---|---|---|---|
 | TC-001 | Start the application and display the account menu | The application is compiled and not running. | 1. Start the application.<br>2. Observe the first screen. | The application displays the Account Management System title and options 1 (View Balance), 2 (Credit Account), 3 (Debit Account), and 4 (Exit), then prompts for a choice from 1-4. |  |  | Integration test of `MainProgram` menu initialization. |
@@ -36,4 +43,3 @@ execution recording. Monetary values are shown with two decimal places.
 - For the Node.js migration, preserve the confirmed business rules while making
   any intentional changes to input validation, negative amounts, overflow
   handling, or unsupported-operation errors explicit in the `Comments` column.
-
